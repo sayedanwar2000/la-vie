@@ -7,8 +7,8 @@ Widget defaultTextFormField({
   required TextEditingController controll,
   required TextInputType type,
   required validat,
-  required String label,
-  required prefix,
+  String? label,
+  prefix,
   ontap,
   bool isEnabled = true,
   bool isPassword = false,
@@ -46,13 +46,13 @@ Widget defaultTextFormField({
             : OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
-        focusedBorder: borderLine
+        /*focusedBorder: borderLine
             ? UnderlineInputBorder(
                 borderSide: BorderSide(color: colorFocuseBorder),
               )
             : OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(color: colorFocuseBorder),
-              ),
+              ),*/
       ),
     );

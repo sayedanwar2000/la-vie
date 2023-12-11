@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:la_vie/share/components/LogoLaVie.dart';
 import 'package:la_vie/share/components/NavigateAndFinish.dart';
 import 'package:la_vie/share/style/colors.dart';
+import 'package:la_vie/view/layouts/layout_start_screen.dart';
 import 'package:la_vie/view/login/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,24 +20,26 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Timer(
-      const Duration(seconds: 3),
+      const Duration(seconds: 2),
           () {
-        navigateAndFinish(context, const LoginScreen());
+        navigateAndFinish(context, const LayoutStartScreen());
       },
     );
   }
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: defaultColorWhite,
       body: Center(
         child: logoLaVie(
-          fontSize: 35,
-          left: 60,
-          top: 25,
-          width: 32,
-          height: 22,
+          fontSize: 36,
+          left: width * 0.14,
+          top: height * 0.01,
+          width: 27,
+          height: 17,
           fontWeight: FontWeight.w400,
         ),
       ),
