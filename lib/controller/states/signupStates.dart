@@ -7,3 +7,4 @@ class SignupLoading extends SignupStates {}
 class SignupSuccess extends SignupStates {}
 
 class SignupError extends SignupStates {}
+class ChangePasswordVisbilityState extends SignupStates {}

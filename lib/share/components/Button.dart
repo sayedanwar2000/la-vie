@@ -29,6 +29,7 @@ Widget defaultButton({
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: colorText ?? Colors.white,
+                    fontFamily: 'Roboto',
                   ),
                 ),
           ),

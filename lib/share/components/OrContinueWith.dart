@@ -30,9 +30,12 @@ Widget orContinueWith() => Column(
           height: 10,
         ),
         Row(
-
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('assets/images/Google.png'),
+            SizedBox(
+              width:20,
+            ),
             Image.asset('assets/images/Facebook.png'),
           ],
         ),

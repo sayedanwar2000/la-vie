@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       const Duration(seconds: 2),
           () {
-        navigateAndFinish(context, const LayoutStartScreen());
+        navigateAndFinish(context, LayoutStartScreen());
       },
     );
   }

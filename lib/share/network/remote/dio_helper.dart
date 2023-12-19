@@ -6,8 +6,12 @@ class DioHelper {
   static init() {
     dio = Dio(
       BaseOptions(
-        baseUrl: '',
+        baseUrl: 'https://lavie.orangedigitalcenteregypt.com',
         receiveDataWhenStatusError: true,
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
       ),
     );
   }
@@ -18,6 +22,7 @@ class DioHelper {
     Map<String, dynamic>? query,
     String? token,
   }) async {
+    dio.options.headers = {'Authorization': 'Bearer $token'};
     return await dio.get(
       url,
       queryParameters: query,
@@ -40,5 +45,15 @@ class DioHelper {
             return status! < 500;
           }),
     );
+  }
+
+  static Future<Response> putData({
+    required String url,
+    Map<String, dynamic>? query,
+    String? accessToken,
+    required Map<String, dynamic> data,
+  }) async {
+    dio.options.headers = {'Authorization': 'Bearer $accessToken'};
+    return await dio.put(url, queryParameters: query, data: data);
   }
 }
